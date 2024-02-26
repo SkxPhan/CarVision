@@ -8,15 +8,21 @@ This is a simple C++ program using OpenCV to detect cars in a video stream.
 
 ## Usage
 
-1. Clone the repository:
+### 1. Clone the repository:
+```bash
 git clone https://github.com/SkxPhan/CarVision.git
-2. Compile the code:
+```
+### 2. Compile the code:
+```bash
 cd CarVision
 mkdir build && cd build
 cmake ..
 make
-3. Run the executable:
+```
+### 3. Run the executable:
+```
 ./CarVision ../data/video.mp4
+```
 
 ## Description
 
