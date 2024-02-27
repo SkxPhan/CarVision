@@ -53,7 +53,7 @@ int main(int argc, char** argv) {
         rectangle(frame, boundingRect, Scalar(0, 0, 255), 2);
         putText(frame, "Car Detected",
                 Point(boundingRect.x, boundingRect.y - 10),
-                FONT_HERSHEY_SIMPLEX, 0.5, Scalar(0, 255, 0), 2, LINE_AA);
+                FONT_HERSHEY_SIMPLEX, 0.5, Scalar(0, 255, 0), 1, LINE_AA);
       }
     }
 
