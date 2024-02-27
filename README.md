@@ -2,6 +2,10 @@
 
 This is a simple C++ program using OpenCV to detect cars in a video stream.
 
+## Demo
+
+![CarVision Demo](demo.gif)
+
 ## Prerequisites
 
 - OpenCV (>= 3.0)
