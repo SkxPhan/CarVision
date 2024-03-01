@@ -7,7 +7,7 @@ using namespace cv;
 
 int main(int argc, char** argv) {
   constexpr auto bgmaskThreshold{200};
-  constexpr auto erosionDilationIterations{2};
+  constexpr auto openingIterations{2};
   constexpr auto minContourArea{2000.0};
 
   if (argc != 2) {
@@ -39,8 +39,8 @@ int main(int argc, char** argv) {
     threshold(bgmask, bgmask, bgmaskThreshold, 255, THRESH_BINARY);
 
     Mat kernel{getStructuringElement(MORPH_ELLIPSE, Size(5, 5))};
-    erode(bgmask, bgmask, kernel, Point(-1, -1), erosionDilationIterations);
-    dilate(bgmask, bgmask, kernel, Point(-1, -1), erosionDilationIterations);
+    morphologyEx(bgmask, bgmask, MORPH_OPEN, kernel, Point(-1, -1),
+                 openingIterations);
 
     std::vector<std::vector<Point>> contours;
     std::vector<Vec4i> hierarchy;
